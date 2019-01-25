@@ -43,6 +43,12 @@ In panel b, differences in expression of heat shock factor transcrip-tion factor
 
 **Figure 1 :** C-REx analysis between heat stress and non-stress conditions for maize HSF TF. **(a)** Click “Apply example 1 and 2 input files” and choose “HSF TF family genes” for each sample. Click the “Gene distribution” tab to produce **(b)** the expression level density plot (non-stress-green, heat stress-pink). Inspect whether the transformed data satisfy the normality requirement by selecting the “normality test” tab. Heat stress shown in **(c)** and non-stress shown in **(d)** with each log-transformed expression value shown as a black circle. Diagonal indicates perfect concordance between the normal distribution and transformed expression values. Click “Student’s t-test” tab for **(e)** a statistical summary with means, standard deviation, and p-values.
 
+# Acknowledgements
+We thank Carla Mann and Ian Braun for helpful discussion and suggestions as well as Scott Zarecor and Darwin Campbell for technical assistance.
+# Funding
+This work has been supported by the Iowa State University Plant Sciences Institute Faculty Scholars program.
+
+_Conflict of Interest:_ none declared.
 
 
 
