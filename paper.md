@@ -48,6 +48,7 @@ In panel b, differences in expression of heat shock factor transcrip-tion factor
 
 # Acknowledgements
 We thank Carla Mann and Ian Braun for helpful discussion and suggestions as well as Scott Zarecor and Darwin Campbell for technical assistance.
+
 # Funding
 This work has been supported by the Iowa State University Plant Sciences Institute Faculty Scholars program.
 
