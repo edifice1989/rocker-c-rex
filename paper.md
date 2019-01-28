@@ -4,19 +4,22 @@ tags:
 - Gene Group
 - RNA-seq
 - Shiny
+- Normalization
+- Statistics test 
+- Visualization 
 authors:
 - name: Mingze He
   orcid: 0000-0002-8164-2480
   affiliation: "1, 2" # (Multiple affiliations must be quoted)
 - name: Kokulapalan Wimalanathan
-  orcid: 
+  orcid: 0000-0001-7811-935X
   affiliation: "1, 2" # (Multiple affiliations must be quoted)
 - name: Peng Liu
-  orcid: 
+  orcid: 0000-0002-2093-8018
   affiliation: "1, 3" # (Multiple affiliations must be quoted)
 - name: Carolyn J. Lawrence-DilL
   orcid: 0000-0003-0069-1430
-  affiliation: "1, 3" # (Multiple affiliations must be quoted)  
+  affiliation: "1, 2, 4" # (Multiple affiliations must be quoted)  
   
 affiliations:
 - name: Bioinformatics and Computational Biology Program, Iowa State University, Ames, Iowa, USA, 50011
