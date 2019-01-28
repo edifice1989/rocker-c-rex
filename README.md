@@ -1,4 +1,7 @@
-# rocker-c-rex
+# option one use c-rex on our lab server
+http://c-rex.dill-picl.org/
+
+# option two install rocker-c-rex
 **Those source code are prepared to build a docker image of shiny web application called C-REx**
 
 Installation as follow:
