@@ -8,7 +8,7 @@ download this repository to your local machine
 
 _Step 2_:
 install and start docker 
-(if you need more help about docker, please refer to docker website: https://docs.docker.com/install/)
+(if you need more help about docker installation, please refer to docker website: https://docs.docker.com/install/)
 
 _Step 3_:
 unzip rocker-c-rex.zip file and cd to local dir and on command line type to build your local docker image: 
