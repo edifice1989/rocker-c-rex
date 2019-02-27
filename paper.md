@@ -17,7 +17,7 @@ authors:
 - name: Peng Liu
   orcid: 0000-0002-2093-8018
   affiliation: "1, 3" # (Multiple affiliations must be quoted)
-- name: Carolyn J. Lawrence-DilL
+- name: Carolyn J. Lawrence-Dill
   orcid: 0000-0003-0069-1430
   affiliation: "1, 2, 4" # (Multiple affiliations must be quoted)  
   
