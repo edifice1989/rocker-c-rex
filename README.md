@@ -69,13 +69,12 @@ Results
 Student t-test p-values indicate that there are no significant expression differences between biological replicates under non-stressed growing conditions. This is true using the group of genes tagged by this GO term for both Gramene and maize-GAMER (Table S1). This outcome indicates that the gene groups specified in both GO annotations datasets behave consistently between replicates and findings of gene expression differences by C-REx are not likely due to sampling effects (i.e., results are not artefactual). 
 
 ## References
-Conesa,A. et al. (2016) A survey of best practices for RNA-seq data analysis. Genome Biol., 17.
-He, M. et al. (2018) A hypothesis-driven approach to assessing significance of differences in RNA expression levels among specific groups of genes. Curr. Plant Biol.
-Lin, F. et al. (2014) Genome-wide identification of housekeeping genes in maize. Plant Mol. Biol., 86, 543–554.
-Makarevitch, I. et al. (2015) Transposable Elements Contribute to Activation of Maize Genes in Response to Abiotic Stress. PLoS Genet., 11.
-Tello-Ruiz, M.K. et al. (2016) Gramene 2016: Comparative plant genomics and pathway resources. Nucleic Acids Res., 44, D1133–D1140.
-Wimalanathan, K. et al. (2018) Maize GO Annotation-Methods, Evaluation, and Review (maize-GAMER). Plant Direct, 2, e00052.
-
+• Conesa,A. et al. (2016) A survey of best practices for RNA-seq data analysis. Genome Biol., 17.
+• He, M. et al. (2018) A hypothesis-driven approach to assessing significance of differences in RNA expression levels among specific groups of genes. Curr. Plant Biol.
+• Lin, F. et al. (2014) Genome-wide identification of housekeeping genes in maize. Plant Mol. Biol., 86, 543–554.
+• Makarevitch, I. et al. (2015) Transposable Elements Contribute to Activation of Maize Genes in Response to Abiotic Stress. PLoS Genet., 11.
+• Tello-Ruiz, M.K. et al. (2016) Gramene 2016: Comparative plant genomics and pathway resources. Nucleic Acids Res., 44, D1133–D1140.
+• Wimalanathan, K. et al. (2018) Maize GO Annotation-Methods, Evaluation, and Review (maize-GAMER). Plant Direct, 2, e00052.
 
 
 
