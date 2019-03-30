@@ -51,11 +51,16 @@ AC149475.2_FG003, 37, non TF genes
 
 ### Formatting Caveats
 •	Expression values can be an average from many biological replicates
+
 •	Do not include commas inside gene group names, a bad example would be 'Human,embryo genes'. Instead, this title should be something like this: ‘Human embryo genes’.
+
 •	Each annotation requires a single line. If there are, e.g., two annotations for the same gene, the same gene gets two lines, like this:
+
 o	AC149818.2_FG001, 188, non TF genes
 o	AC149818.2_FG001, 188, housekeeping genes
+
 •	If you are comparing the same group of genes under two conditions, genes with TPM or FPKM values smaller than 1 in both conditions should be filtered out. We consider such data unreliable because it is hard to tell whether the corresponding reads were from signal or noise.
+
 •	Use the exact label 'housekeeping genes' in the third column to annotate housekeeping genes. Some bad examples would be Housekeeping Genes, housekeeping, HOUSEKEEPING, etc.
 
 ## Example usage cases
