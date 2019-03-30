@@ -57,6 +57,7 @@ AC149475.2_FG003, 37, non TF genes
 •	Each annotation requires a single line. If there are, e.g., two annotations for the same gene, the same gene gets two lines, like this:
 
 o	AC149818.2_FG001, 188, non TF genes
+
 o	AC149818.2_FG001, 188, housekeeping genes
 
 •	If you are comparing the same group of genes under two conditions, genes with TPM or FPKM values smaller than 1 in both conditions should be filtered out. We consider such data unreliable because it is hard to tell whether the corresponding reads were from signal or noise.
