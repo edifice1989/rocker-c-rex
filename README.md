@@ -1,6 +1,6 @@
 # C-REx: A shiny web application to compare RNA expression
 
-C-REx implements a novel statistical method (He et al., 2017) that was designed to assess significance of differences in RNA expression levels among specified groups of genes. This Shiny web application called C-REx (Comparison of RNA Expression) enables researchers to readily test hypotheses about whether specific gene groups share expression profiles and whether those profiles differ from those of other groups of genes. 
+C-REx implements a novel statistical method (He et al., 2017) that was designed to assess significance of differences in RNA expression levels among specified groups of genes. This Shiny web application called C-REx (Comparison of RNA Expression) enables researchers to readily test hypotheses about whether specific gene groups share expression profiles and whether those profiles differ from those of other groups of genes. The method implemented via C-REx is more sensitive than GO enrichment when fold change between conditions is small.
 
 ## Installation 
 ### option one use c-rex on our lab server
