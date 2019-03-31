@@ -124,7 +124,7 @@ As shown in Table S3, both C-REx and GO enrichment recover significant results f
 
 **Table S3. P-values by GO enrichment analysis and C-REx on GO:0009644 (response to high light intensity)**
 
-|   |  C-REx |  GO enrichment |
+|   |  C-REx |C-REx |  GO enrichment |GO enrichment |
 |----------|:-------------:|------:|------:|------:|
 |   |Gramene|	maize-GAMER|	 Gramene|	maize-GAMER|
 |p-value|	0.1321*|	0.0021*|	1*|	<0.0001*|
