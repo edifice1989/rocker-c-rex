@@ -90,9 +90,12 @@ Not all GO datasets assign the same group of genes to a given GO term. Here, we 
 RNA-seq data were collected under UV treatment from maize (Makarevitch et al., 2015). Expression values of genes annotated to GO:0006950 (response to stress) by Gramene version 37 (Tello-Ruiz et al., 2016) (N=129) or maize-GAMER (Wimalanathan et al., 2018) (N=971) along with housekeeping genes were extracted from samples. Biological replicates were averaged into one single gene expression value for each gene. This results in 2 files, “Gramene-UV-stress.csv” and “maize-GAMER-UV-stress.csv” (available online under C-REx “How to” tab). Each file has 3 columns: gene ID, expression value (FPKM/TPM), and gene group name (GO:0006950 was used to annotate gene group in this example). These datasets were uploaded as “Gramene-UV-stress.csv” and “maize-GAMER-UV-stress.csv” to C-REx and a “Between sample comparison” was carried out. Under “Choose Gene Groups” GO:0006950 (genes annotated by Gramene or maize-GAMER as GO:0006950) was selected on the control panel. 
 
 #### Results
-![](FigS1.png)
+
 
 The Gramene dataset has a flatter distribution (the curve is wider) than that of maize-GAMER (Fig S1),  and the Gramene dataset has a larger standard deviation with fewer genes annotated as compared with the maize-GAMER dataset (Table S2). F-test analysis of the difference between standard deviations (maize-GAMER vs Gramene) yields a p-value <0.001, indicating that there is a significant difference in standard deviation between the Gramene and maize-GAMER datasets. This smaller standard deviation could be interpreted many ways, but one thing is clear: the set of genes annotated as GO:0006950 in the GAMER dataset responds to stress in a more coordinated way than those tagged with this term in the Gramene dataset, thus demonstrating that methods for defining gene groups are highly influential for gene expression analysis.
+
+![](FigS1.png)
+Figure 1. Influence of various methods of GO annotations on gene expression distribution density plots.  RNA expression levels of response related gene groups (genes marked as GO:0006950) normalized by housekeeping genes plotted by percentage. Note that each gene expression value was averaged across biological replicates before grouping. Gramene (N-129) shown in blue; maize-GAMER (N=971) shown in pink.
 
 ### Detecting small but significant expression differences
 GO enrichment analysis of RNA-seq data depends on defining individual DEG. Here we show that C-REx can recover groups identified by GO enrichment as well as those that are not identifiable by GO enrichment. 
