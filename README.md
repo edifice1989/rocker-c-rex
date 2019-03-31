@@ -1,12 +1,31 @@
 # C-REx: A shiny web application to compare RNA expression
 
+- [Summary](#summary)
+- [Installation](#install)
+	- [Use on our lab server](#labserver)
+	- [Docker](#rocker)
+- [Input data format](#format)
+- [Example usage cases](#example)
+	- [Assessing variability between replicates](#example1)
+	- [Influence of gene grouping methods on observed expression differences](#example2)
+	- [Detecting small but significant expression differences](#example3)
+- [References](#references)
+
+
+<a name="summary"></a>
 ## Summary
 C-REx implements a novel statistical method (He et al., 2017) that was designed to assess significance of differences in RNA expression levels among specified groups of genes. This Shiny web application called C-REx (Comparison of RNA Expression) enables researchers to readily test hypotheses about whether specific gene groups share expression profiles and whether those profiles differ from those of other groups of genes. The method implemented via C-REx is more sensitive than GO enrichment when fold change between conditions is small.
 
+<a name="install"></a>
 ## Installation 
+
+<a name="labserver"></a>
 ### option one use c-rex on our lab server
 http://c-rex.dill-picl.org/
+#### Quick start 
+To use C-REx, first choose to carry out a ‘within sample’ or a ‘between sample’ comparison. Next, upload or select expression input file(s) from the examples provided (see format details in the next section). For within sample comparisons, a single file is uploaded whereas between-sample comparisons require two input files. 
 
+<a name="rocker"></a>
 ### option two install rocker-c-rex
 **Those source code are prepared to build a docker image of shiny web application called C-REx**
 
@@ -30,9 +49,7 @@ run docker image by command line:
 (Note: The default port set as 3838)
 Finally the new shiny application website is available at local: 0.0.0.0:3838/app_c_rex
 
-## Quick start 
-To use C-REx, first choose to carry out a ‘within sample’ or a ‘between sample’ comparison. Next, upload or select expression input file(s) from the examples provided (see format details in the next section). For within sample comparisons, a single file is uploaded whereas between-sample comparisons require two input files. 
-
+<a name="format"></a>
 ## Input data format
 
 Comma separated values (.csv), not zipped.
@@ -71,7 +88,12 @@ o	AC149818.2_FG001, 188, housekeeping genes
 
 •	Use the exact label 'housekeeping genes' in the third column to annotate housekeeping genes. Some bad examples would be Housekeeping Genes, housekeeping, HOUSEKEEPING, etc.
 
+<a name="example"></a>
+
 ## Example usage cases
+All test data is available to be downloaded from "How to" section on http://c-rex.dill-picl.org
+
+<a name="example1"></a>
 ### Assessing variability between replicates
 
 Gene expression values are often inconsistent between biological or technical replicates (Conesa et al., 2016). C-REx can be used to carry out Student’s t-test between biological replicates to determine whether sample-based variability is so great that downstream analyses are not appropriate. 
@@ -89,7 +111,7 @@ Student t-test p-values indicate that there are no significant expression differ
 | p-value |  0.3497 | 0.5723 |
 
     
-
+<a name="example2"></a>
 ### Influence of gene grouping methods on observed expression differences
 
 Not all GO datasets assign the same group of genes to a given GO term. Here, we show how differences between GO annotations can influence the outcomes of gene expression analyses for both GO enrichment and for analysis using C-REx.
@@ -113,6 +135,7 @@ The Gramene dataset has a flatter distribution (the curve is wider) than that of
 |----------|:-------------:|------:|
 | Standard deviation |  0.39 | 0.31 |
 
+<a name="example3"></a>
 
 ### Detecting small but significant expression differences
 GO enrichment analysis of RNA-seq data depends on defining individual DEG. Here we show that C-REx can recover groups identified by GO enrichment as well as those that are not identifiable by GO enrichment. 
@@ -138,6 +161,8 @@ As shown in Table 3, both C-REx and GO enrichment recover significant results fo
 |   |Gramene|	maize-GAMER|	 Gramene|	maize-GAMER|
 |p-value|	<0.0001*|	0.7984*|	0.2835*|	1*|
 * adjusted p-value after Bonferroni multiple test correction
+
+<a name="references"></a>
 
 ## References
 Conesa,A. et al. (2016) A survey of best practices for RNA-seq data analysis. Genome Biol., 17.
