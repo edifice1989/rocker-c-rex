@@ -96,7 +96,7 @@ The Gramene dataset has a flatter distribution (the curve is wider) than that of
 
 ![](FigS1.png)
 
-Figure 1. Influence of various methods of GO annotations on gene expression distribution density plots.  RNA expression levels of response related gene groups (genes marked as GO:0006950) normalized by housekeeping genes plotted by percentage. Note that each gene expression value was averaged across biological replicates before grouping. Gramene (N-129) shown in blue; maize-GAMER (N=971) shown in pink.
+**Figure 1. Influence of various methods of GO annotations on gene expression distribution density plots.**  RNA expression levels of response related gene groups (genes marked as GO:0006950) normalized by housekeeping genes plotted by percentage. Note that each gene expression value was averaged across biological replicates before grouping. Gramene (N-129) shown in blue; maize-GAMER (N=971) shown in pink.
 
 ### Detecting small but significant expression differences
 GO enrichment analysis of RNA-seq data depends on defining individual DEG. Here we show that C-REx can recover groups identified by GO enrichment as well as those that are not identifiable by GO enrichment. 
