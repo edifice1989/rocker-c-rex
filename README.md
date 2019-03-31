@@ -95,6 +95,7 @@ RNA-seq data were collected under UV treatment from maize (Makarevitch et al., 2
 The Gramene dataset has a flatter distribution (the curve is wider) than that of maize-GAMER (Fig S1),  and the Gramene dataset has a larger standard deviation with fewer genes annotated as compared with the maize-GAMER dataset (Table S2). F-test analysis of the difference between standard deviations (maize-GAMER vs Gramene) yields a p-value <0.001, indicating that there is a significant difference in standard deviation between the Gramene and maize-GAMER datasets. This smaller standard deviation could be interpreted many ways, but one thing is clear: the set of genes annotated as GO:0006950 in the GAMER dataset responds to stress in a more coordinated way than those tagged with this term in the Gramene dataset, thus demonstrating that methods for defining gene groups are highly influential for gene expression analysis.
 
 ![](FigS1.png)
+
 Figure 1. Influence of various methods of GO annotations on gene expression distribution density plots.  RNA expression levels of response related gene groups (genes marked as GO:0006950) normalized by housekeeping genes plotted by percentage. Note that each gene expression value was averaged across biological replicates before grouping. Gramene (N-129) shown in blue; maize-GAMER (N=971) shown in pink.
 
 ### Detecting small but significant expression differences
