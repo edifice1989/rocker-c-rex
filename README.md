@@ -81,6 +81,13 @@ RNA-seq data were collected from maize under control (non-stress) conditions (Ma
 #### Results
 Student t-test p-values indicate that there are no significant expression differences between biological replicates under non-stressed growing conditions. This is true using the group of genes tagged by this GO term for both Gramene and maize-GAMER (Table S1). This outcome indicates that the gene groups specified in both GO annotations datasets behave consistently between replicates and findings of gene expression differences by C-REx are not likely due to sampling effects (i.e., results are not artefactual). 
 
+**Table S1. t-test p-values between biological replicates.**
+|   |     Gramene     |  maize-GAMER |
+|----------|:-------------:|------:|
+| p-value |  0.3497 | 0.5723 |
+
+    
+
 ### Influence of gene grouping methods on observed expression differences
 
 Not all GO datasets assign the same group of genes to a given GO term. Here, we show how differences between GO annotations can influence the outcomes of gene expression analyses for both GO enrichment and for analysis using C-REx.
