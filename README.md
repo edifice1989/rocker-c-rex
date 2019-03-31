@@ -1,5 +1,6 @@
 # C-REx: A shiny web application to compare RNA expression
 
+## Contents
 - [Summary](#summary)
 - [Installation](#install)
 	- [Use on our lab server](#labserver)
