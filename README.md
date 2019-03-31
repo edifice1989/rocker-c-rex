@@ -106,6 +106,13 @@ The Gramene dataset has a flatter distribution (the curve is wider) than that of
 
 **Figure 1. Influence of various methods of GO annotations on gene expression distribution density plots.**  RNA expression levels of response related gene groups (genes marked as GO:0006950) normalized by housekeeping genes plotted by percentage. Note that each gene expression value was averaged across biological replicates before grouping. Gramene (N-129) shown in blue; maize-GAMER (N=971) shown in pink.
 
+**Table S2. Standard deviation of UV stressed gene expression value distribution annotated by Gramene and maize-GAMER**
+
+|   |  Gramene (N=129) |  maize-GAMER (N=971) |
+|----------|:-------------:|------:|
+| Standard deviation |  0.39 | 0.31 |
+
+
 ### Detecting small but significant expression differences
 GO enrichment analysis of RNA-seq data depends on defining individual DEG. Here we show that C-REx can recover groups identified by GO enrichment as well as those that are not identifiable by GO enrichment. 
 
@@ -115,6 +122,12 @@ RNA-seq data collected were under control (non-stress) and UV treatment for maiz
 #### Results
 As shown in Table S3, both C-REx and GO enrichment recover significant results for GO:0009644 (response to high light intensity) using the maize-GAMER gene set (see Supplemental excel file Full List of GO Enrichment Analysis and C-REx Results). The Gramene gene set annotations for GO:0009644 do not yield a significant p-value for GO enrichment nor for the C-REx analysis. This suggests that 1) GO annotation methods and datasets that define gene groups influence the interpretation of RNA-seq data; and 2) C-REx could detect strong signals on the same gene set marked as significant by GO enrichment analysis. To further assess the ability of C-REx, GO:0006950 (response to stress) are compared between C-REx and GO enrichment. P-values of GO enrichment on neither Gramene nor maize-GAMER gene sets are significant after Bonferroni multiple test correction. On the other hand, C-REx detects a significant shift between UV and non-stress gene groups, which yields a p-value <0.0001 for the Gramene set, but not the maize-GAMER set (Table S4). One thing to notice, although in section 3.2 C-REx detects larger variance in Gramene dataset than maize-GAMER, the p-value from C-REx on Gramene dataset is still very significant compared with GO enrichment analysis. The goal of GO enrichment test is to identify gene sets that are enriched in the list of differentially expressed genes, and that certainly dependent on the method for differential expression analysis. The C-REx test here aims to identify gene sets whose expression profile changes across condition. In the case of GO:0006950 set, although GO enrichment test does not provide significant result, our test still shows this gene set may respond to the stress condition. This suggests that C-REx could be used as a supplementary approach alongside GO enrichment analysis to assess changes in gene expression. 
 
+**Table S3. P-values by GO enrichment analysis and C-REx on GO:0009644 (response to high light intensity)**
+|   |  C-REx |  GO enrichment |
+|----------|:-------------:|------:|------:|------:|
+|   |Gramene|	maize-GAMER|	 Gramene|	maize-GAMER|
+|p-value|	0.1321*|	0.0021*|	1*|	<0.0001*|
+* adjusted p-value after Bonferroni multiple test correction
 
 ## References
 Conesa,A. et al. (2016) A survey of best practices for RNA-seq data analysis. Genome Biol., 17.
