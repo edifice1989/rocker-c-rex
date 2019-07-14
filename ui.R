@@ -1,111 +1,7 @@
 fluidPage(
   tags$head(includeScript("google-analytics.js")),
   navbarPage("C-REx",
-             tabPanel("About",
-	     		 br(),
-                      img(src = "icon.png", width=600,height=450),
-                      h2('Purpose'),
-                      br(),
-                      p(
-                        "C-REx enables gene group expression comparison within or across samples."
-                      ),
-                      br(),
-                      p("A quick instance where our method could be helpful:"),
-                      p(
-                        "Suppose you have a group of genes of unknown function , such as a novel family of transcription factors (TF)."
-                      ),
-                      p(
-                        "You want to test a hypothesis that this novel TF gene group could be activated in a specific stress condition, such as heat stress."
-                      ),
-                      p(
-                        "C-REx provides a data-processing pipeline to enable statistical testing (via Student t-test/Wilcoxon signed-rank test) to determine whether RNA expression patterns are significantly different between stress and non-stress samples."
-                      ),
-                      p(
-                        "The difference between the typical differential expression (DE), discovery-based approach and our group-to-group RNA expression comparison is illustrated below.
-                        We use a distribution of gene expression values for gene group rather than DE gene sets where gene expression is analyzed individually."
-                      ),
-                      br(),
-                      img(src = "flowchart_1.png", width=600,height=450),
-                      img(src = "flowchart_2.png", width=600,height=450),
-                      br(),
-                      h2('Features'),
-                      br(),
-                      p(
-                        "1. We provide a webtool to transform your FPKM/TPM RNA dataset into normal distributions, which enables student t-test for downstream analysis"
-                      ),
-                      p(
-                        "2. Visualization of log-transformed gene group expression distribution and draw QQ-plot to test normality"
-                      ),
-                      p("3. Use housekeeping gene to normalize across sample gene group expression level"),
-                      p("4. T-test on gene groups within a sample or across samples"),
-                      p("5. An alternative non-parametric Wilcoxon signed-rank test is also provided if log-transformed distribution does not follow normal distribution")
-                      ),
-             tabPanel("How to",
-                      h2('Upload input file format'),
-                      br(),
-                      p("-Should be in csv, separated by comma, NOT zipped!"),
-                      p("-Has 3 columns, namely Gene ID, Gene Expression value (TPM/FPKM), Gene Group"),
-                      br(),                      
-                      h2("Two examples as below:"),
-                      br(),
-                      a("data from Makarevitch et al. 2015", 
-                        href = "http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004915"),
-                      br(),
-                      h3("maize B73 RNA-seq under heat stress conditions"),
-                         
-                        
-                      pre("
-                      AC147602.5_FG004,188.42990159969,non TF genes\n
-                      AC148152.3_FG005,8.73844335765158,non TF genes\n
-                      AC148152.3_FG008,93.7227957598519,non TF genes\n
-                      AC148167.6_FG001,96.1663916765039,non TF genes\n
-                      AC149475.2_FG002,17.846234593301,non TF genes\n
-                      AC149475.2_FG003,37.1563876166064,non TF genes\n
-                      AC149475.2_FG005,39.795811239933,non TF genes\n
-                      AC149475.2_FG007,1.69852605933062,non TF genes\n
-                      AC149810.2_FG008,3.9723493339935,non TF genes\n
-                      AC149818.2_FG001,7.13727197998732,non TF genes\n"),
-                      downloadButton("downloadData1", label = "Download example 1 data"),
-                      h3("maize B73 RNA-seq under non-stress conditions"),
-                      pre("
-                      AC147602.5_FG004,201.411825599906,non TF genes\n
-                      AC148152.3_FG005,4.97887906298883,non TF genes\n
-                      AC148152.3_FG008,78.8313272531063,non TF genes\n
-                      AC148167.6_FG001,69.2050966298259,non TF genes\n
-                      AC149475.2_FG002,6.16576535299732,non TF genes\n
-                      AC149475.2_FG003,12.7370309176619,non TF genes\n
-                      AC149475.2_FG005,20.9201998332308,non TF genes\n
-                      AC149475.2_FG007,1.51412422166159,non TF genes\n
-                      AC149818.2_FG001,2.77512580265959,non TF genes\n
-                      AC149818.2_FG006,10.113616006654,non TF genes\n"),
-                      downloadButton("downloadData2", label = "Download example 2 data"),
-                      br(),  
-                      h3("Notes:"),
-                      br(),
-                      p("-Please do not include commas inside gene group names, a bad example would be 'Human,embryo genes'"),
-                      p("-If there are more than one annotation for the same gene, you need to DUPLICATE each gene entry, such as:"),
-                      p(" AC149818.2_FG001,188.42990159969,non TF genes"),
-                      p(" AC149818.2_FG001,188.42990159969,housekeeping genes"),
-                      p("-If you are comparing the same group of genes under two conditions, genes with TPM or FPKM values smaller than 1 in both condition should be removed. Usually such small measurement is not reliable."),
-                      p("-Also, please use the gene group label 'housekeeping genes' to annotate housekeeping genes, some bad examples would be Housekeeping Genes, housekeeping, HOUSEKEEPING..."),
-                      h3("Additional test data:"),
-                      p("Those files also used in publication"),
-                      downloadButton("downloadData3", label = "Download Gramene-UV-stress.csv"),
-                      br(),
-                      downloadButton("downloadData4", label = "Download maize-GAMER-UV-stress.csv"),
-                      br(),
-                      downloadButton("downloadData5", label = "Download Gramene-non-stress.csv"),
-                      br(),
-                      downloadButton("downloadData6", label = "Download maize-GAMER-non-stress.csv"),
-                      br(),
-                      downloadButton("downloadData7", label = "Download Gramene-non-stress-biological-replicate-1.csv"),
-                      br(),
-                      downloadButton("downloadData8", label = "Download Gramene-non-stress-biological-replicate-2.csv"),
-                      br(),
-                      downloadButton("downloadData9", label = "Download maize-GAMER-non-stress-biological-replicate-1.csv"),
-                      br(),
-                      downloadButton("downloadData10", label = "Download maize-GAMER-non-stress-biological-replicate-2.csv")
-             ),
+             
              tabPanel("Within sample comparison",
                       sidebarLayout(
                         sidebarPanel(
@@ -291,6 +187,111 @@ tabPanel("Between sample comparison",
            )
              )
          )
+             ),
+	     tabPanel("About",
+	     		 br(),
+                      img(src = "icon.png", width=600,height=450),
+                      h2('Purpose'),
+                      br(),
+                      p(
+                        "C-REx enables gene group expression comparison within or across samples."
+                      ),
+                      br(),
+                      p("A quick instance where our method could be helpful:"),
+                      p(
+                        "Suppose you have a group of genes of unknown function , such as a novel family of transcription factors (TF)."
+                      ),
+                      p(
+                        "You want to test a hypothesis that this novel TF gene group could be activated in a specific stress condition, such as heat stress."
+                      ),
+                      p(
+                        "C-REx provides a data-processing pipeline to enable statistical testing (via Student t-test/Wilcoxon signed-rank test) to determine whether RNA expression patterns are significantly different between stress and non-stress samples."
+                      ),
+                      p(
+                        "The difference between the typical differential expression (DE), discovery-based approach and our group-to-group RNA expression comparison is illustrated below.
+                        We use a distribution of gene expression values for gene group rather than DE gene sets where gene expression is analyzed individually."
+                      ),
+                      br(),
+                      img(src = "flowchart_1.png", width=600,height=450),
+                      img(src = "flowchart_2.png", width=600,height=450),
+                      br(),
+                      h2('Features'),
+                      br(),
+                      p(
+                        "1. We provide a webtool to transform your FPKM/TPM RNA dataset into normal distributions, which enables student t-test for downstream analysis"
+                      ),
+                      p(
+                        "2. Visualization of log-transformed gene group expression distribution and draw QQ-plot to test normality"
+                      ),
+                      p("3. Use housekeeping gene to normalize across sample gene group expression level"),
+                      p("4. T-test on gene groups within a sample or across samples"),
+                      p("5. An alternative non-parametric Wilcoxon signed-rank test is also provided if log-transformed distribution does not follow normal distribution")
+                      ),
+             tabPanel("How to",
+                      h2('Upload input file format'),
+                      br(),
+                      p("-Should be in csv, separated by comma, NOT zipped!"),
+                      p("-Has 3 columns, namely Gene ID, Gene Expression value (TPM/FPKM), Gene Group"),
+                      br(),                      
+                      h2("Two examples as below:"),
+                      br(),
+                      a("data from Makarevitch et al. 2015", 
+                        href = "http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004915"),
+                      br(),
+                      h3("maize B73 RNA-seq under heat stress conditions"),
+                         
+                        
+                      pre("
+                      AC147602.5_FG004,188.42990159969,non TF genes\n
+                      AC148152.3_FG005,8.73844335765158,non TF genes\n
+                      AC148152.3_FG008,93.7227957598519,non TF genes\n
+                      AC148167.6_FG001,96.1663916765039,non TF genes\n
+                      AC149475.2_FG002,17.846234593301,non TF genes\n
+                      AC149475.2_FG003,37.1563876166064,non TF genes\n
+                      AC149475.2_FG005,39.795811239933,non TF genes\n
+                      AC149475.2_FG007,1.69852605933062,non TF genes\n
+                      AC149810.2_FG008,3.9723493339935,non TF genes\n
+                      AC149818.2_FG001,7.13727197998732,non TF genes\n"),
+                      downloadButton("downloadData1", label = "Download example 1 data"),
+                      h3("maize B73 RNA-seq under non-stress conditions"),
+                      pre("
+                      AC147602.5_FG004,201.411825599906,non TF genes\n
+                      AC148152.3_FG005,4.97887906298883,non TF genes\n
+                      AC148152.3_FG008,78.8313272531063,non TF genes\n
+                      AC148167.6_FG001,69.2050966298259,non TF genes\n
+                      AC149475.2_FG002,6.16576535299732,non TF genes\n
+                      AC149475.2_FG003,12.7370309176619,non TF genes\n
+                      AC149475.2_FG005,20.9201998332308,non TF genes\n
+                      AC149475.2_FG007,1.51412422166159,non TF genes\n
+                      AC149818.2_FG001,2.77512580265959,non TF genes\n
+                      AC149818.2_FG006,10.113616006654,non TF genes\n"),
+                      downloadButton("downloadData2", label = "Download example 2 data"),
+                      br(),  
+                      h3("Notes:"),
+                      br(),
+                      p("-Please do not include commas inside gene group names, a bad example would be 'Human,embryo genes'"),
+                      p("-If there are more than one annotation for the same gene, you need to DUPLICATE each gene entry, such as:"),
+                      p(" AC149818.2_FG001,188.42990159969,non TF genes"),
+                      p(" AC149818.2_FG001,188.42990159969,housekeeping genes"),
+                      p("-If you are comparing the same group of genes under two conditions, genes with TPM or FPKM values smaller than 1 in both condition should be removed. Usually such small measurement is not reliable."),
+                      p("-Also, please use the gene group label 'housekeeping genes' to annotate housekeeping genes, some bad examples would be Housekeeping Genes, housekeeping, HOUSEKEEPING..."),
+                      h3("Additional test data:"),
+                      p("Those files also used in publication"),
+                      downloadButton("downloadData3", label = "Download Gramene-UV-stress.csv"),
+                      br(),
+                      downloadButton("downloadData4", label = "Download maize-GAMER-UV-stress.csv"),
+                      br(),
+                      downloadButton("downloadData5", label = "Download Gramene-non-stress.csv"),
+                      br(),
+                      downloadButton("downloadData6", label = "Download maize-GAMER-non-stress.csv"),
+                      br(),
+                      downloadButton("downloadData7", label = "Download Gramene-non-stress-biological-replicate-1.csv"),
+                      br(),
+                      downloadButton("downloadData8", label = "Download Gramene-non-stress-biological-replicate-2.csv"),
+                      br(),
+                      downloadButton("downloadData9", label = "Download maize-GAMER-non-stress-biological-replicate-1.csv"),
+                      br(),
+                      downloadButton("downloadData10", label = "Download maize-GAMER-non-stress-biological-replicate-2.csv")
              ),
 tabPanel("Citation",
          h3("Please cite:"),
